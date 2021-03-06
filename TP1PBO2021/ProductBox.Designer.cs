@@ -67,9 +67,11 @@ namespace TP1PBO2021
             // 
             // picture
             // 
+            this.picture.BackColor = System.Drawing.Color.WhiteSmoke;
             this.picture.Location = new System.Drawing.Point(3, 3);
             this.picture.Name = "picture";
             this.picture.Size = new System.Drawing.Size(211, 128);
+            this.picture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.picture.TabIndex = 3;
             this.picture.TabStop = false;
             // 
@@ -77,10 +79,12 @@ namespace TP1PBO2021
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.White;
             this.Controls.Add(this.picture);
             this.Controls.Add(this.buttonBeli);
             this.Controls.Add(this.price);
             this.Controls.Add(this.title);
+            this.Margin = new System.Windows.Forms.Padding(10);
             this.Name = "ProductBox";
             this.Size = new System.Drawing.Size(217, 271);
             ((System.ComponentModel.ISupportInitialize)(this.picture)).EndInit();

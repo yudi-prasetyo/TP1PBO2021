@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using TP1PBO2021.Properties;
 
 namespace TP1PBO2021
 {
@@ -23,29 +24,37 @@ namespace TP1PBO2021
             productBoxes[0].Title = "Supreme KW";
             productBoxes[0].Kategori = "Baju";
             productBoxes[0].Price = 100000;
+            productBoxes[0].Picture = Resources.product0;
 
             productBoxes[1] = new ProductBox();
             productBoxes[1].Title = "Playstation Series X";
             productBoxes[1].Kategori = "Elektronik";
-            productBoxes[1].Price = 600000;
+            productBoxes[1].Price = 1000000;
+            productBoxes[1].Picture = Resources.product1;
 
             productBoxes[2] = new ProductBox();
             productBoxes[2].Title = "iPhone Galaxy S21";
             productBoxes[2].Kategori = "Elektronik";
             productBoxes[2].Price = 400000;
+            productBoxes[2].Picture = Resources.product2;
 
             productBoxes[3] = new ProductBox();
-            productBoxes[3].Title = "Jersey KST Pusat";
+            productBoxes[3].Title = "Deus KW";
             productBoxes[3].Kategori = "Baju";
-            productBoxes[3].Price = 750000;
+            productBoxes[3].Price = 200000;
+            productBoxes[3].Picture = Resources.product3;
 
             productBoxes[4] = new ProductBox();
             productBoxes[4].Title = "Gomu Gomu no Mi";
             productBoxes[4].Kategori = "Makanan";
             productBoxes[4].Price = 150000;
+            productBoxes[4].Picture = Resources.product4;
             #endregion
         }
 
+        /// <summary>
+        /// Display list of data when this window is loaded
+        /// </summary>
         private void MainMenu_Load(object sender, EventArgs e)
         {
             displayList();
@@ -62,19 +71,19 @@ namespace TP1PBO2021
         {
             flowLayoutPanel1.Controls.Clear();
 
-            for (int i = 0; i < productBoxes.Length; i++)
+            foreach (var product in productBoxes)
             {
-                if (jenisBarang == productBoxes[i].Kategori || jenisBarang == "")
+                if (jenisBarang == product.Kategori || jenisBarang == "")
                 {
                     if ((rangeHarga == "") || 
                         (((rangeHarga == "Rp. 100rb - Rp. 200rb") && 
-                        (productBoxes[i].Price >= 100000) && (productBoxes[i].Price <= 200000)) ||
+                        (product.Price >= 100000) && (product.Price <= 200000)) ||
                         ((rangeHarga == "Rp. 200rb - Rp. 500rb") &&
-                        (productBoxes[i].Price >= 200000) && (productBoxes[i].Price <= 500000)) ||
+                        (product.Price >= 200000) && (product.Price <= 500000)) ||
                         ((rangeHarga == "Rp. 500rb - Rp. 1jt") &&
-                        (productBoxes[i].Price >= 500000) && (productBoxes[i].Price <= 1000000))))
+                        (product.Price >= 500000) && (product.Price <= 1000000))))
                     {
-                        flowLayoutPanel1.Controls.Add(productBoxes[i]);
+                        flowLayoutPanel1.Controls.Add(product);
                     }
                 }
             }

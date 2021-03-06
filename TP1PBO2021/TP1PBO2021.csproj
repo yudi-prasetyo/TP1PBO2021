@@ -83,6 +83,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -96,6 +97,27 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Jerry.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Gomu_Gomu_no_Mi_Infobox.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\619BkvKW35L._SX342_.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\download %284%29.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\download %283%29.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\s21_family_kv_mo_img.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ErjR_QcXIAQxpu3.5.jpeg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
