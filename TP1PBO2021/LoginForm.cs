@@ -19,6 +19,7 @@ namespace TP1PBO2021
         private String password;
 
         // The correct password, that will be compared with user's input
+        private String correctUsername = "bebas";
         private String correctPassword = "pbo123";
         public LoginForm()
         {
@@ -30,7 +31,7 @@ namespace TP1PBO2021
             this.username = Convert.ToString(usernameInput.Text);
             this.password = Convert.ToString(passwordInput.Text);
 
-            if (password == correctPassword)
+            if (password == correctPassword && username == correctUsername)
             {
                 // Open new window
                 MainMenu mainMenu = new MainMenu();
@@ -43,6 +44,11 @@ namespace TP1PBO2021
                 string text = "Password salah";
                 MessageBox.Show(text);
             }
+        }
+
+        private void LoginForm_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

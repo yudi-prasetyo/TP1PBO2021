@@ -14,9 +14,11 @@ namespace TP1PBO2021
     public partial class MainMenu : Form
     {
         private ProductBox[] productBoxes = new ProductBox[5];
+        
         public MainMenu()
         {
             InitializeComponent();
+            Console.WriteLine("Hello");
 
             #region Initialize products data
 
@@ -49,7 +51,33 @@ namespace TP1PBO2021
             productBoxes[4].Kategori = "Makanan";
             productBoxes[4].Price = 150000;
             productBoxes[4].Picture = Resources.product4;
+
+            foreach (var product in productBoxes)
+            {
+                product.buttonBeli.Click += new EventHandler(clickBeli);
+            }
             #endregion
+        }
+
+        /// <summary>
+        /// Method to perform an action when one of button of ProductBox is clicked 
+        /// </summary>
+        private void clickBeli(object sender, EventArgs e)
+        {
+            Control c = (Control) sender;
+            ProductBox parent = (ProductBox) c.Parent;
+
+            parentHomePanel.Visible = false;
+            parentDetailPanel.Visible = true;
+
+            productDetail.Title = parent.Title;
+            productDetail.Price = parent.Price;
+            productDetail.Picture = parent.Picture;
+        }
+
+        private void Product_Click(object sender, EventArgs e)
+        {
+            throw new NotImplementedException();
         }
 
         /// <summary>
@@ -69,7 +97,8 @@ namespace TP1PBO2021
         /// </summary>
         private void displayList(String jenisBarang = "", String rangeHarga = "")
         {
-            flowLayoutPanel1.Controls.Clear();
+            homePanel.Controls.Clear();
+            Console.WriteLine(jenisBarang + " " + rangeHarga);
 
             foreach (var product in productBoxes)
             {
@@ -83,7 +112,7 @@ namespace TP1PBO2021
                         ((rangeHarga == "Rp. 500rb - Rp. 1jt") &&
                         (product.Price >= 500000) && (product.Price <= 1000000))))
                     {
-                        flowLayoutPanel1.Controls.Add(product);
+                        homePanel.Controls.Add(product);
                     }
                 }
             }
@@ -100,6 +129,45 @@ namespace TP1PBO2021
 
             if (jenisBarang != "Jenis Barang" && rangeHarga != "Harga")
                 displayList(jenisBarang, rangeHarga);
+        }
+
+        private void detailPanel_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void MainMenu_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void backButton_Click(object sender, EventArgs e)
+        {
+            parentHomePanel.Visible = true;
+            parentDetailPanel.Visible = false;
+            displayList();
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            System.Diagnostics.Process.Start("https://tokopedia.com");
+        }
+
+        private void panel8_Click(object sender, EventArgs e)
+        {
+            System.Diagnostics.Process.Start("https://tokopedia.com");
+        }
+
+        private void panel7_Click(object sender, EventArgs e)
+        {
+            LoginForm loginForm = new LoginForm();
+            loginForm.Show();
+            this.Hide();
         }
     }
 }

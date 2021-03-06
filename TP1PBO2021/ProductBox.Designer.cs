@@ -58,12 +58,16 @@ namespace TP1PBO2021
             // 
             // buttonBeli
             // 
-            this.buttonBeli.Location = new System.Drawing.Point(68, 232);
+            this.buttonBeli.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.buttonBeli.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonBeli.ForeColor = System.Drawing.Color.White;
+            this.buttonBeli.Location = new System.Drawing.Point(20, 232);
             this.buttonBeli.Name = "buttonBeli";
-            this.buttonBeli.Size = new System.Drawing.Size(75, 23);
+            this.buttonBeli.Size = new System.Drawing.Size(173, 23);
             this.buttonBeli.TabIndex = 2;
             this.buttonBeli.Text = "Beli";
-            this.buttonBeli.UseVisualStyleBackColor = true;
+            this.buttonBeli.UseVisualStyleBackColor = false;
+            this.buttonBeli.Click += new System.EventHandler(this.buttonBeli_Click);
             // 
             // picture
             // 
@@ -79,7 +83,7 @@ namespace TP1PBO2021
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.White;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.Controls.Add(this.picture);
             this.Controls.Add(this.buttonBeli);
             this.Controls.Add(this.price);
@@ -97,7 +101,7 @@ namespace TP1PBO2021
 
         private System.Windows.Forms.Label title;
         private System.Windows.Forms.Label price;
-        private System.Windows.Forms.Button buttonBeli;
         private System.Windows.Forms.PictureBox picture;
+        public System.Windows.Forms.Button buttonBeli;
     }
 }

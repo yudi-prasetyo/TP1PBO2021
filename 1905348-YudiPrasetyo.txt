@@ -1,0 +1,15 @@
+Saya Yudi Prasetyo mengerjakan Tugas Praktikum 1 dalam mata kuliah Desain dan 
+Pemrograman Berorientasi Objek untuk kerberkahanNya maka saya tidak melakukan 
+kecurangan seperti yang telah dispesifikasikan, Aamiin.
+
+Kesulitan:
+- Menampilkan data produk secara iteratif
+- Membuat custom UserControl dan menampilkannya di form main menu
+- Perpindahan antar halaman atau pergantian antar panel
+
+Hal baru yang dipelajari:
+- Sebagian besar terdapat pada list kesulitan di atas
+- Layouting pada Visual Studio terutama menggunakan panel-panel yang ada
+- Pembuatan class pada C#
+- Penggunaan IDE
+- Alur program dan juga data pada OOP

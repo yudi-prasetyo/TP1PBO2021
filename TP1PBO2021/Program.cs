@@ -16,7 +16,7 @@ namespace TP1PBO2021
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new MainMenu());
+            Application.Run(new LoginForm());
         }
     }
 }

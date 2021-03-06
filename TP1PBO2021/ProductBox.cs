@@ -22,13 +22,12 @@ namespace TP1PBO2021
         private int _price;
         private Image _picture;
         private String _kategori;
-
+        
         public String Kategori
         {
             get { return _kategori; }
             set { _kategori = value; }
         }
-
 
         [Category("Custom Properties")]
         public String Title
@@ -49,6 +48,10 @@ namespace TP1PBO2021
         {
             get { return _picture; }
             set { _picture = value; picture.Image = value; }
+        }
+
+        private void buttonBeli_Click(object sender, EventArgs e)
+        {
         }
     }
 }
