@@ -58,10 +58,22 @@
     <Compile Include="MainMenu.Designer.cs">
       <DependentUpon>MainMenu.cs</DependentUpon>
     </Compile>
+    <Compile Include="ProductBox.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ProductBox.Designer.cs">
+      <DependentUpon>ProductBox.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="LoginForm.resx">
       <DependentUpon>LoginForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainMenu.resx">
+      <DependentUpon>MainMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProductBox.resx">
+      <DependentUpon>ProductBox.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
