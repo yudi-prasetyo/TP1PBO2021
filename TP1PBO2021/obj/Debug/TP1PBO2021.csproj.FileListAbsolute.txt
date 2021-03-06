@@ -9,3 +9,4 @@ C:\Users\yudip\source\repos\TP1PBO2021\TP1PBO2021\obj\Debug\TP1PBO2021.exe
 C:\Users\yudip\source\repos\TP1PBO2021\TP1PBO2021\obj\Debug\TP1PBO2021.pdb
 C:\Users\yudip\source\repos\TP1PBO2021\TP1PBO2021\obj\Debug\TP1PBO2021.MainMenu.resources
 C:\Users\yudip\source\repos\TP1PBO2021\TP1PBO2021\obj\Debug\TP1PBO2021.ProductBox.resources
+C:\Users\yudip\source\repos\TP1PBO2021\TP1PBO2021\obj\Debug\TP1PBO2021.csprojAssemblyReference.cache

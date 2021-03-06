@@ -19,8 +19,16 @@ namespace TP1PBO2021
         }
 
         private String _title;
-        private String _price;
+        private int _price;
         private Image _picture;
+        private String _kategori;
+
+        public String Kategori
+        {
+            get { return _kategori; }
+            set { _kategori = value; }
+        }
+
 
         [Category("Custom Properties")]
         public String Title
@@ -30,10 +38,10 @@ namespace TP1PBO2021
         }
 
         [Category("Custom Properties")]
-        public String Price
+        public int Price
         {
             get { return _price; }
-            set { _price = value; price.Text = value; }
+            set { _price = value; price.Text = value.ToString(); }
         }
 
         [Category("Custom Properties")]
